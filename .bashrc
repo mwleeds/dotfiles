@@ -6,6 +6,10 @@ export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
  fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo \
 '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$\[\033[00m\] "
 
+git config --global user.name "Matthew Leeds"
+git config --global user.email "mwl458@gmail.com"
+git config --global core.editor vim
+
 alias dir='ls -lrat'
 alias inst='sudo apt-get install'
 alias re='sudo shutdown -r now'
