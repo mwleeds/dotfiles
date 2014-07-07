@@ -1,6 +1,7 @@
 :set number
 :set ruler
 :set showmatch
+:set smartindent
 :set tabstop=4
 :set shiftwidth=4
 :set colorcolumn=80
