@@ -9,3 +9,5 @@
 :set cinoptions+=j1
 :map <S-Enter>  O<ESC>                                                          
 :map <Enter>    o<ESC>
+:colorscheme desert
+:set expandtab
