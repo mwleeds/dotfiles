@@ -1,1 +1,3 @@
+#!/bin/bash
 sudo apt-get install texlive-full python3 vim spotify-client sl openssh-server openjdk-7-jre-lib clang gimp vlc chromium-browser firefox git build-essential
+# sudo apt-get install texlive-full
