@@ -11,3 +11,4 @@
 :map <Enter>    o<ESC>
 :colorscheme desert
 :set expandtab
+:syntax on
