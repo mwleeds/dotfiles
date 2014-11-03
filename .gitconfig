@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	ci = commit
+[user]
+	name = Matthew Leeds
+	email = mwl458@gmail.com
+[core]
+	editor = vim
