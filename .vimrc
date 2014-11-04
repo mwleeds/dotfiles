@@ -1,13 +1,12 @@
-:set number
-:set ruler
-:set showmatch
-:set smartindent
-:set tabstop=4
-:set shiftwidth=4
-:autocmd BufNewFile,BufRead [Mm]akefile* set noexpandtab                        
-:set cinoptions+=j1
-:map <S-Enter>  O<ESC>                                                          
-:map <Enter>    o<ESC>
-:colorscheme desert
-:set expandtab
-:syntax on
+set tabstop=4
+set shiftwidth=2
+colorscheme desert
+set number
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
+nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
+nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
