@@ -8,7 +8,7 @@ git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
 git config --global core.editor vim
 
-alias dir='ls -lrat'
+alias dir='ls -lrath'
 alias inst='sudo apt-get install'
 alias re='sudo shutdown -r now'
 alias st='sudo shutdown -h now'
