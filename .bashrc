@@ -8,6 +8,8 @@ git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
 git config --global core.editor vim
 
+mesg n
+
 alias dir='ls -lrath'
 alias inst='sudo apt-get install'
 alias re='sudo shutdown -r now'
@@ -30,4 +32,4 @@ alias ohshit='git reset --hard && git clean -df'
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias mwleeds='ssh root@107.170.190.138'
 alias myip='wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//''
-mesg n
+alias usage='du -sh ./*'
