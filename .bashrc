@@ -8,12 +8,13 @@ git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
 git config --global core.editor vim
 
-alias dir='ls -lrat'
+alias dir='ls -lrath'
 alias inst='sudo apt-get install'
 alias re='sudo shutdown -r now'
 alias st='sudo shutdown -h now'
 alias v='vim'
-alias rolltide='ssh mwleeds@linux-02.cbhp.ua.edu'
+alias cbh1='ssh mwleeds@linux-01.cbhp.ua.edu'
+alias cbh2='ssh mwleeds@linux-02.cbhp.ua.edu'
 alias cls='clear'
 # alias br100='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/\
 # brightness' 
@@ -21,13 +22,12 @@ alias cls='clear'
 # brightness'
 # alias br10='echo 400 | sudo tee /sys/class/backlight/intel_backlight/\
 # brightness'
-alias rolltide1='ssh mwleeds@linux-01.cbhp.ua.edu'
 alias py='python3' 
 alias ..='cd ..'
 # alias cursor='sudo modprobe -r psmouse && sudo modprobe psmouse'
 # alias wifi='cd ~/Desktop/rtl8723au && sudo ./install_wifi_drivers'
 alias ohshit='git reset --hard && git clean -df'
-alias hetnet='cd ~/Desktop/HetNetSim/ && git status && ls'
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias mwleeds='ssh root@107.170.190.138'
 alias myip='wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//''
+mesg n
