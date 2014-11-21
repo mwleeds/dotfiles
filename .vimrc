@@ -16,5 +16,5 @@ syntax enable
 set showcmd
 set visualbell
 set t_vb=
-set mouse=a
+set mouse=r
 set pastetoggle=<F2>
