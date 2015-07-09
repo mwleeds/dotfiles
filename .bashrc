@@ -18,17 +18,8 @@ alias v='vim'
 alias cbh1='ssh mwleeds@linux-01.cbhp.ua.edu'
 alias cbh2='ssh mwleeds@linux-02.cbhp.ua.edu'
 alias cls='clear'
-# alias br100='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/\
-# brightness' 
-# alias br50='echo 2000 | sudo tee /sys/class/backlight/intel_backlight/\
-# brightness'
-# alias br10='echo 400 | sudo tee /sys/class/backlight/intel_backlight/\
-# brightness'
-alias py='python3' 
 alias ..='cd ..'
 # alias cursor='sudo modprobe -r psmouse && sudo modprobe psmouse'
-# alias wifi='cd ~/Desktop/rtl8723au && sudo ./install_wifi_drivers'
-alias ohshit='git reset --hard && git clean -df'
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias mwleeds='ssh root@107.170.190.138'
 alias myip='wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//''
