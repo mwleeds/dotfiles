@@ -2,8 +2,6 @@ set tabstop=4
 set shiftwidth=2
 colorscheme desert
 set number
-set incsearch
-set ignorecase
 set smartcase
 set hlsearch
 set encoding=utf-8

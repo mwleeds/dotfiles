@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo apt-get install python3 vim sl openssh-server openjdk-7-jre-lib clang gimp vlc chromium-browser firefox git build-essential npm nodejs pdfunite pdftk
+sudo apt-get install python3 vim sl openssh-server openjdk-8-jre-lib clang gimp vlc chromium-browser firefox git build-essential npm nodejs pdftk tree unity-tweak-tool
 # sudo apt-get install spotify-client
 # sudo apt-get install texlive-full
