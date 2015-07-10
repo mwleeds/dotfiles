@@ -7,6 +7,8 @@ export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
 git config --global core.editor vim
+git config --global push.default simple
+git config --global branch.autosetuprebase always
 
 mesg n
 
