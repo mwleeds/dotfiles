@@ -7,10 +7,10 @@ export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
 git config --global core.editor vim
-git config --global push.default simple
-git config --global branch.autosetuprebase always
 
 mesg n
+
+shopt -s dotglob
 
 alias dir='ls -lrath'
 alias inst='sudo apt-get install'
@@ -27,9 +27,3 @@ alias mwleeds='ssh root@107.170.190.138'
 alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //" -e "s/<.*$//"'
 alias usage='du -sh ./*'
 alias toggleUSB='for i in {1..27}; do sudo acpitool -W $i; done'
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit '
-alias gd='git diff '
-alias gp='git push '

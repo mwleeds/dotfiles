@@ -1,8 +1,18 @@
 [alias]
 	st = status
+	ck = checkout
 	ci = commit
+	ad = add
+	br = branch
+	di = diff
+	pl = pull
+	ps = push
 [user]
 	name = Matthew Leeds
 	email = mwl458@gmail.com
 [core]
 	editor = vim
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
