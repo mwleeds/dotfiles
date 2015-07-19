@@ -16,3 +16,4 @@
 	default = simple
 [branch]
 	autosetuprebase = always
+	autosetupmerge = always
