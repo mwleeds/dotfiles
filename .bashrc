@@ -1,3 +1,6 @@
+
+# PERSONAL CONFIG
+
 export PATH=.:$PATH
 export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\";\
