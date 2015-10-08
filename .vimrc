@@ -18,3 +18,5 @@ set visualbell
 set t_vb=
 set mouse=r
 set pastetoggle=<F2>
+so ~/.vim/plugin/detectindent.vim
+DetectIndent
