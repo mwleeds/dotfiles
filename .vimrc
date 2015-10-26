@@ -1,11 +1,12 @@
-set nocompatible
+set nocompatible " don't emulate vi bugs
 set tabstop=4
 set shiftwidth=4
 set expandtab
 colorscheme desert
-set number
+set number " line numbers
 set smartcase
-set hlsearch
+set incsearch " search as characters are typed
+set hlsearch " highlight search matches
 set encoding=utf-8
 nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
@@ -20,3 +21,4 @@ set mouse=r
 set pastetoggle=<F2>
 so ~/.vim/plugin/detectindent.vim
 DetectIndent
+set cursorline " underline current line
