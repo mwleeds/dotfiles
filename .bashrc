@@ -30,3 +30,5 @@ alias mwleeds='ssh root@107.170.190.138'
 alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //" -e "s/<.*$//"'
 alias usage='du -sh ./*'
 alias toggleUSB='for i in {1..27}; do sudo acpitool -W $i; done'
+
+eval `ssh-agent -s`
