@@ -31,4 +31,4 @@ alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //
 alias usage='du -sh ./*'
 alias toggleUSB='for i in {1..27}; do sudo acpitool -W $i; done'
 
-eval `ssh-agent -s`
+eval `ssh-agent -s` > /dev/null
