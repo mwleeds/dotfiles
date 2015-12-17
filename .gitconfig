@@ -7,6 +7,7 @@
 	di = diff
 	pl = pull
 	ps = push
+    cl = clone
 [user]
 	name = Matthew Leeds
 	email = mwl458@gmail.com
