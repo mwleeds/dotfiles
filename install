@@ -1,12 +1,9 @@
 #!/bin/bash
 # install official packages
-sudo apt-get install python3 vim sl openssh-server openjdk-8-jre clang gimp vlc chromium-browser firefox git build-essential npm nodejs pdftk tree unity-tweak-tool compizconfig-settings-manager compiz-plugins indicator-multiload iotop htop gparted screen curl npm ghc mit-scheme valgrind traceroute
+sudo apt-get install python3 vim sl openssh-server clang gimp vlc chromium git build-essential npm nodejs pdftk tree iotop htop gparted screen curl npm ghc mit-scheme valgrind traceroute
 # remove stuff
-sudo apt-get remove --purge unity-lens-shopping update-manager
+#sudo apt-get remove --purge unity-lens-shopping update-manager
 # install spotify
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
 #echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-#sudo apt-get update && sudo apt-get install spotify-client
-# install copy
-sudo add-apt-repository ppa:paolorotolo/copy
-sudo apt-get update && sudo apt-get install copy
+sudo apt-get install spotify-client
