@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install official packages
-sudo apt-get install python3 vim sl openssh-server clang gimp vlc chromium git build-essential npm nodejs pdftk tree iotop htop gparted screen curl npm ghc mit-scheme valgrind traceroute
+sudo apt-get install python3 vim sl openssh-server clang gimp vlc chromium git build-essential npm nodejs pdftk tree iotop htop gparted screen curl npm ghc mit-scheme valgrind traceroute fail2ban
 
 # remove stuff
 #sudo apt-get remove --purge unity-lens-shopping update-manager
