@@ -7,6 +7,7 @@ export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
  fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo \
 '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$\[\033[00m\] "
 export CDPATH=::$HOME/Desktop
+export PASSWORD_STORE_DIR=~/ownCloud/.password-store
 
 git config --global user.name "Matthew Leeds"
 git config --global user.email "mwl458@gmail.com"
