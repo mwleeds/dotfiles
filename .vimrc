@@ -22,3 +22,5 @@ set pastetoggle=<F2>
 so ~/.vim/plugin/detectindent.vim
 DetectIndent
 set cursorline " underline current line
+set listchars=eol:•,tab:→\ ,trail:␣,extends:↷,precedes:↶,nbsp:⁔
+set list
