@@ -1,0 +1,2 @@
+! set compose key to right alt
+keysym Alt_R = Multi_key
