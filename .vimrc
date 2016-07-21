@@ -19,8 +19,12 @@ set visualbell
 set t_vb=
 set mouse=r
 set pastetoggle=<F2>
-so ~/.vim/plugin/detectindent.vim
-DetectIndent
+"so ~/.vim/plugin/detectindent.vim
+"DetectIndent
 set cursorline " underline current line
 set listchars=eol:•,tab:→\ ,trail:␣,extends:↷,precedes:↶,nbsp:⁔
 set list
+highlight Search ctermfg=black
+highlight IncSearch ctermfg=black
+filetype plugin indent on
+set title
