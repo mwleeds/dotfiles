@@ -34,5 +34,7 @@ alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
+# this command deletes all git branches that have been merged into the current branch, master
+alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
 
 eval `ssh-agent -s` > /dev/null
