@@ -36,5 +36,13 @@ alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
+# this command prints a random line from a file that has up to 32,767 lines
+function random-line() {
+    n=$((RANDOM<<15|RANDOM))
+    let "n %= $(wc -l "$@" | cut -d" " -f1)"
+    sed -n $((n+1))p "$@"
+}
+alias random-word='random-line /usr/share/dict/words | tr -d "\n"'
+alias xkcd936='random-word && random-word && random-word && random-word'
 
 eval `ssh-agent -s` > /dev/null
