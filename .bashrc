@@ -1,4 +1,9 @@
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 # PERSONAL CONFIG
 
 export HISTSIZE=50000
