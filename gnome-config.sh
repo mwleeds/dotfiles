@@ -8,3 +8,5 @@ gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 gsettings set org.gnome.nautilus.preferences default-sort-order 'mtime'
 gsettings set org.gnome.nautilus.preferences default-sort-in-reverse-order true
 
+# show date in the bar at the top
+gsettings set org.gnome.desktop.interface clock-show-date true
