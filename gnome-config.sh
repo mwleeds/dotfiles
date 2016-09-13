@@ -10,3 +10,6 @@ gsettings set org.gnome.nautilus.preferences default-sort-in-reverse-order true
 
 # show date in the bar at the top
 gsettings set org.gnome.desktop.interface clock-show-date true
+
+# enable the GTK+ Inspector keyboard shortcut
+gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
