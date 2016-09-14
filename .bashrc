@@ -52,4 +52,9 @@ alias xkcd936='random-word && random-word && random-word && random-word'
 alias night='nohup redshift -l 33.21:-87.54 >/dev/null 2>&1 &'
 alias jgb='cd ~/jhbuild/checkout/gnome-builder && jhbuild shell'
 
+# This gets the password for the first matching entry
+function get-pass() {
+    pass -c `pass | grep "$@" | cut -d' ' -f 2`
+}
+
 eval `ssh-agent -s` > /dev/null
