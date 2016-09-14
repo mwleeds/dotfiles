@@ -34,13 +34,18 @@ shopt -s dotglob
 shopt -s checkwinsize
 shopt -s histappend
 
+# miscellaneous aliases
 alias ..='cd ..'
 alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //" -e "s/<.*$//"'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
+alias night='nohup redshift -l 33.21:-87.54 >/dev/null 2>&1 &'
+alias jgb='cd ~/jhbuild/checkout/gnome-builder && jhbuild shell'
+
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
+
 # this command prints a random line from a file that has up to 32,767 lines
 function random-line() {
     n=$((RANDOM<<15|RANDOM))
@@ -49,8 +54,6 @@ function random-line() {
 }
 alias random-word='random-line /usr/share/dict/words | tr -d "\n"'
 alias xkcd936='random-word && random-word && random-word && random-word'
-alias night='nohup redshift -l 33.21:-87.54 >/dev/null 2>&1 &'
-alias jgb='cd ~/jhbuild/checkout/gnome-builder && jhbuild shell'
 
 # This gets the password for the first matching entry
 function get-pass() {
