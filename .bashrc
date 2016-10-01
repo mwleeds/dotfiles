@@ -19,15 +19,6 @@ export GOPATH=$HOME/work
 export HISTCONTROL=ignoredups:erasedups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-git config --global user.name "Matthew Leeds"
-git config --global user.email "mwl458@gmail.com"
-git config --global core.editor vim
-git config --global color.ui auto
-git config --global bz.default-tracker bugzilla.gnome.org
-git config --global bz.default-product gnome-builder
-git config --global bz.default-component general
-git config --global url.ssh://mwleeds@git.gnome.org/git/.insteadof gnome:
-
 mesg n
 
 shopt -s dotglob
