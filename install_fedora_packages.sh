@@ -1,3 +1,49 @@
 #!/bin/bash
 
-sudo dnf install vim python3 python3-pip yum-plugin-fastestmirror
+sudo dnf install git \
+                 vim \
+                 python3 \
+                 python3-pip \
+                 pass \
+                 owncloud-client \
+                 chromium \
+                 yum-plugin-fastestmirror \
+                 irssi \
+                 htop \
+                 autoconf \
+                 automake \
+                 gettext-devel \
+                 yelp-tools \
+                 docbook-style-xsl \
+                 libxml2-python \
+                 glib-devel \
+                 dbus-glib-devel \
+                 libssh2-devel \
+                 llvm-devel \
+                 clang-devel \
+                 ncurses-devel \
+                 gobject-introspection-devel \
+                 ostree-devel \
+                 fuse-devel \
+                 json-glib-devel \
+                 libseccomp-devel \
+                 libdwarf-devel \
+                 @development-tools \
+                 @c-development \
+                 dbus-python \
+                 redhat-rpm-config \
+                 gnome-common \
+                 perl-Text-CSV \
+                 perl-XML-Parser \
+                 libmkv \
+                 sloccount \
+                 glib2-devel \
+                 git-bz \
+                 jsoncpp-devel \
+                 pcre2-devel \
+                 e2fsprogs-libs \
+                 rubygem-sass \
+                 webkitgtk4-devel \
+                 sysprof-devel \
+                 mm-common \
+                 glib-networking
