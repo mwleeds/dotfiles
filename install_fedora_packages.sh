@@ -10,6 +10,7 @@ sudo dnf install git \
                  yum-plugin-fastestmirror \
                  irssi \
                  htop \
+                 devhelp \
                  autoconf \
                  automake \
                  gettext-devel \
