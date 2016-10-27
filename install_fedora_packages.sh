@@ -51,4 +51,5 @@ sudo dnf install git \
                  cvs \
                  subversion \
                  flex \
-                 bison
+                 bison \
+                 elfutils-libelf-devel
