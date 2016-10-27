@@ -28,3 +28,6 @@ gsettings set org.gnome.desktop.sound event-sounds false
 
 # add the Dvorak keyboard layout
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+dvorak'), ('xkb', 'us')]"
+
+# show the battery percentage in the top bar
+gsettings set org.gnome.desktop.interface show-battery-percentage true
