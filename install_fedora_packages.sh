@@ -47,4 +47,8 @@ sudo dnf install git \
                  webkitgtk4-devel \
                  sysprof-devel \
                  mm-common \
-                 glib-networking
+                 glib-networking \
+                 cvs \
+                 subversion \
+                 flex \
+                 bison
