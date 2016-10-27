@@ -52,4 +52,5 @@ sudo dnf install git \
                  subversion \
                  flex \
                  bison \
-                 elfutils-libelf-devel
+                 elfutils-libelf-devel \
+                 thunderbird
