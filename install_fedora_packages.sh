@@ -53,4 +53,5 @@ sudo dnf install git \
                  flex \
                  bison \
                  elfutils-libelf-devel \
-                 thunderbird
+                 thunderbird \
+                 dconf-editor
