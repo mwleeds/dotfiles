@@ -54,4 +54,23 @@ sudo dnf install git \
                  bison \
                  elfutils-libelf-devel \
                  thunderbird \
-                 dconf-editor
+                 dconf-editor \
+                 ninja-build \
+                 qrencode \
+                 libcroco-devel \
+                 valgrind-devel \
+                 libunwind-devel \
+                 gstreamer-devel \
+                 gobject-introspection-devel \
+                 gnutls \
+                 gtk-doc \
+                 gstreamer1 \
+                 gstreamer1-vaapi \
+                 libarchive-devel \
+                 e2fsprogs \
+                 e2fsprogs-libs \
+                 e2fsprogs-static \
+                 auto-buildrequires \
+                 ostree-devel \
+                 gpgme-devel \
+                 libdwarf-devel
