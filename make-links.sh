@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
@@ -11,3 +13,8 @@ test -e /usr/local/bin/back.sh || sudo ln -s ~/Desktop/dotfiles/scripts/back.sh 
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
+
+mkdir -p ~/.local/share/gnome-shell
+rm -rf ~/.local/share/gnome-shell/extensions
+ln -sf ~/Desktop/dotfiles/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
+
