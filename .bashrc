@@ -19,6 +19,11 @@ export G_MESSAGES_DEBUG=all
 export GOPATH=$HOME/work
 export HISTCONTROL=ignoredups:erasedups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export ACBUILD_BIN_DIR=~/Desktop/acbuild/bin
+export PATH=$PATH:$ACBUILD_BIN_DIR
+export PATH=/usr/local/android-studio/bin:$PATH
+export PATH=/home/mwleeds/node_modules/tldr/bin:$PATH
+export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwleeds/jhbuild/install/lib/pkgconfig:/home/mwleeds/jhbuild/install/share/pkgconfig:/usr/share/pkgconfig
 
 mesg n
 
@@ -34,6 +39,7 @@ alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
 alias night='nohup redshift -l 33.21:-87.54 >/dev/null 2>&1 &'
 alias jgb='cd ~/jhbuild/checkout/gnome-builder && jhbuild shell'
+alias gitkey='ssh-add ~/.ssh/github_id_rsa'
 
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
