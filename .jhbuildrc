@@ -25,7 +25,7 @@ checkoutroot = '~/jhbuild/checkout'
 prefix = '~/jhbuild/install'
 
 # custom CFLAGS / environment pieces for the build
-os.environ['CFLAGS'] = '-Wall -Werror=implicit -g3 -O0 -fno-inline'
+os.environ['CFLAGS'] = '-Wall -g3 -O0 -fno-inline'
 os.environ['CXXFLAGS'] = '-Wall -g3 -O0 -fno-inline'
 
 # extra arguments to pass to all autogen.sh scripts
