@@ -73,4 +73,5 @@ sudo dnf install git \
                  auto-buildrequires \
                  ostree-devel \
                  gpgme-devel \
-                 libdwarf-devel
+                 libdwarf-devel \
+                 thefuck

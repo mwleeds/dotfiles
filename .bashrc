@@ -53,3 +53,4 @@ function get-pass() {
 }
 
 eval `ssh-agent -s` > /dev/null
+eval $(thefuck --alias)
