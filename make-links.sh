@@ -13,6 +13,7 @@ test -e /usr/local/bin/back.sh || sudo ln -s ~/Desktop/dotfiles/scripts/back.sh 
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
+ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 
 mkdir -p ~/.local/share/gnome-shell
 rm -rf ~/.local/share/gnome-shell/extensions

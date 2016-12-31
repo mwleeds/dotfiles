@@ -1,0 +1,14 @@
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+    min-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+headerbar {
+    min-height: 0px;
+    padding: 4px;
+    font-size: 0.8em;
+}
