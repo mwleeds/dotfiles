@@ -1,7 +1,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # PERSONAL CONFIG
@@ -27,7 +27,11 @@ export ACBUILD_BIN_DIR=~/Desktop/acbuild/bin
 export PATH=$PATH:$ACBUILD_BIN_DIR
 export PATH=/usr/local/android-studio/bin:$PATH
 export PATH=/home/mwleeds/node_modules/tldr/bin:$PATH
+export PATH=/home/mwleeds/Android/Sdk/tools:$PATH
+export PATH=/home/mwleeds/Android/Sdk/platform-tools:$PATH
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwleeds/jhbuild/install/lib/pkgconfig:/home/mwleeds/jhbuild/install/share/pkgconfig:/usr/share/pkgconfig
+export MALINE=/home/mwleeds/maline
+export PATH=$MALINE/bin:$PATH
 
 mesg n
 
