@@ -6,13 +6,17 @@ fi
 
 # PERSONAL CONFIG
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 export HISTSIZE=50000
 export HISTTIMEFORMAT='%F %T %t'
 export PATH=.:~/.local/bin:$PATH
 export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\";\
  fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo \
-'\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$\[\033[00m\] "
+ '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n↳ "
 export CDPATH=::$HOME/Desktop
 export PASSWORD_STORE_DIR=~/Desktop/password-store
 export G_MESSAGES_DEBUG=all
