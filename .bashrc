@@ -10,13 +10,26 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+get_ssh_keys() {
+    if ssh-add -l >/dev/null 2>&1; then
+        NUM_SSH_KEYS=`ssh-add -l | wc -l`
+        if [ "$NUM_SSH_KEYS" == "1" ]; then
+            echo "($NUM_SSH_KEYS key)"
+        else
+            echo "($NUM_SSH_KEYS keys)"
+        fi
+    else
+        echo "(0 keys)"
+    fi
+}
+
 export HISTSIZE=50000
 export HISTTIMEFORMAT='%F %T %t'
 export PATH=.:~/.local/bin:$PATH
 export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\";\
  fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo \
- '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n↳ "
+ '\[\033[01;32m\]\u@\h'; fi)\[\033[01;34m\] \w\[\033[33m\]\$(parse_git_branch) \[\e[36m\]\$(get_ssh_keys)\[\033[00m\]\n↳ "
 export CDPATH=::$HOME/Desktop
 export PASSWORD_STORE_DIR=~/Desktop/password-store
 export G_MESSAGES_DEBUG=all
