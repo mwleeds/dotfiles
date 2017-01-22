@@ -18,8 +18,6 @@ get_ssh_keys() {
         else
             echo "($NUM_SSH_KEYS keys)"
         fi
-    else
-        echo "(0 keys)"
     fi
 }
 
