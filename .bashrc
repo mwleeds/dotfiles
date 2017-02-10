@@ -23,7 +23,6 @@ get_ssh_keys() {
 
 export HISTSIZE=50000
 export HISTTIMEFORMAT='%F %T %t'
-export PATH=.:~/.local/bin:$PATH
 export PS1="\[\033[01;37m\]\$? \$(if [[ \$? == 0 ]]; then echo \
 \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\";\
  fi) $(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo \
@@ -35,14 +34,9 @@ export GOPATH=$HOME/work
 export HISTCONTROL=ignoredups:erasedups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 export ACBUILD_BIN_DIR=~/Desktop/acbuild/bin
-export PATH=$PATH:$ACBUILD_BIN_DIR
-export PATH=/usr/local/android-studio/bin:$PATH
-export PATH=/home/mwleeds/node_modules/tldr/bin:$PATH
-export PATH=/home/mwleeds/Android/Sdk/tools:$PATH
-export PATH=/home/mwleeds/Android/Sdk/platform-tools:$PATH
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwleeds/jhbuild/install/lib/pkgconfig:/home/mwleeds/jhbuild/install/share/pkgconfig:/usr/share/pkgconfig
 export MALINE=/home/mwleeds/maline
-export PATH=$MALINE/bin:$PATH
+export PATH=$ACBUILD_BIN_DIR:$MALINE/bin:/usr/local/android-studio/bin:~/Android/Sdk/tools/:~/Android/Sdk/platform-tools:~/node_modules/tldr/bin:$PATH:.
 
 mesg n
 
