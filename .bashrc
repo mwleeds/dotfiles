@@ -53,6 +53,8 @@ alias proto='ctags -x --c-kinds=fp'
 alias night='nohup redshift -l 33.21:-87.54 >/dev/null 2>&1 &'
 alias jgb='cd ~/jhbuild/checkout/gnome-builder && jhbuild shell'
 alias gitkey='ssh-add ~/.ssh/github_id_rsa'
+alias gplom='git pull origin master'
+alias gpsom='git push origin master'
 
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
