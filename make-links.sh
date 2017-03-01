@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ln -sf ~/Desktop/dotfiles/.gdbinit ~/.gdbinit
 ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
