@@ -34,4 +34,4 @@ autogenargs='--enable-gtk-doc'
 
 # A string listing additional arguments to be passed to make.
 # Set makeargs to 'V=1' for verbose build output.
-makeargs = 'V=1'
+makeargs = 'V=1 -j8'
