@@ -36,7 +36,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 export ACBUILD_BIN_DIR=~/Desktop/acbuild/bin
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwleeds/jhbuild/install/lib/pkgconfig:/home/mwleeds/jhbuild/install/share/pkgconfig:/usr/share/pkgconfig
 export MALINE=/home/mwleeds/maline
-export PATH=$ACBUILD_BIN_DIR:$MALINE/bin:/usr/local/android-studio/bin:~/Android/Sdk/tools/:~/Android/Sdk/platform-tools:~/node_modules/tldr/bin:$PATH:.
+export PATH=$ACBUILD_BIN_DIR:$MALINE/bin:/usr/local/android-studio/bin:~/Android/Sdk/tools/:~/Android/Sdk/platform-tools:~/node_modules/tldr/bin:~/.local/bin:$PATH:.
 
 mesg n
 
