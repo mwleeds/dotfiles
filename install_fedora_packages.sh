@@ -2,6 +2,7 @@
 
 sudo dnf install git \
                  vim \
+                 pygobject2 \
                  python3 \
                  python3-pip \
                  pass \
