@@ -20,3 +20,5 @@
 	autosetupmerge = always
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[format]
+    pretty = fuller
