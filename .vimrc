@@ -28,3 +28,4 @@ highlight Search ctermfg=black
 highlight IncSearch ctermfg=black
 filetype plugin indent on
 set title
+set titleold=""
