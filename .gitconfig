@@ -8,6 +8,9 @@
 	pl = pull
 	ps = push
     cl = clone
+    lg = log --graph --oneline
+    grp = grep -p
+    shw = show --stat -p -U12
 [user]
 	name = Matthew Leeds
 	email = mwleeds@protonmail.com
@@ -22,3 +25,7 @@
 	insteadOf = https://github.com/
 [format]
     pretty = fuller
+[log]
+    decorate = auto
+[grep]
+    linenumber = true
