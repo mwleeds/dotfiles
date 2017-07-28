@@ -92,5 +92,20 @@ function get-pass() {
     pass -c `pass | grep "$@" | cut -d' ' -f 2`
 }
 
+# The following two functions make it easier to use an unreviewed tag to keep
+# track of which commits have been reviewed on a branch
+function move-unreviewed() {
+    prev_commit=`git rev-list -n1 "unreviewed"`
+    git tag -d "unreviewed" >/dev/null
+    next_commit=`git log --format='%H %P' --all | grep -F " $prev_commit" | tail -n1 | cut -f1 -d' '`
+    git tag "unreviewed" $next_commit
+    echo "unreviewed tag moved to commit `git log --oneline -n1 $next_commit`"
+}
+
+function show-unreviewed() {
+    commit=`git rev-list -n1 "unreviewed"`
+    git shw $commit
+}
+
 eval `ssh-agent -s` > /dev/null
 eval $(thefuck --alias)
