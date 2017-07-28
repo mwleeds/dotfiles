@@ -4,6 +4,7 @@ ln -sf ~/Desktop/dotfiles/.gdbinit ~/.gdbinit
 ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
+ln -sf ~/Desktop/dotfiles/.git-completion ~/.git-completion.bash
 ln -sf ~/Desktop/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/Desktop/dotfiles/.Xmodmap ~/.Xmodmap
 rm -rf ~/.vim && mkdir ~/.vim
