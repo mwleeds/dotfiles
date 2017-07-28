@@ -29,3 +29,7 @@ highlight IncSearch ctermfg=black
 filetype plugin indent on
 set title
 set titleold=""
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
