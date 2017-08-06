@@ -37,7 +37,6 @@ sudo dnf install git \
                  gnome-common \
                  perl-Text-CSV \
                  perl-XML-Parser \
-                 libmkv \
                  sloccount \
                  glib2-devel \
                  git-bz \
