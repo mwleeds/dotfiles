@@ -13,6 +13,7 @@ ln -sf ~/Desktop/dotfiles/.vim/doc ~/.vim
 
 test -e /usr/bin/back.sh || sudo ln -s ~/Desktop/dotfiles/scripts/back.sh /usr/bin/
 test -e /usr/bin/diff-so-fancy || sudo ln -s ~/Desktop/dotfiles/scripts/diff-so-fancy /usr/bin/
+test -e /usr/bin/git-superfixup.pl || sudo ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl /usr/bin/
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
