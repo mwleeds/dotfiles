@@ -7,6 +7,7 @@ ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
 ln -sf ~/Desktop/dotfiles/.git-completion.bash ~/.git-completion.bash
 ln -sf ~/Desktop/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/Desktop/dotfiles/.Xmodmap ~/.Xmodmap
+ln -sf ~/Desktop/dotfiles/.inputrc ~/.inputrc
 rm -rf ~/.vim && mkdir ~/.vim
 ln -sf ~/Desktop/dotfiles/.vim/plugin ~/.vim
 ln -sf ~/Desktop/dotfiles/.vim/doc ~/.vim
