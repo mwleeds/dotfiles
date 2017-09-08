@@ -36,4 +36,4 @@ gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'chromium-browser.desktop', 'mozilla-thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop']"
 
 # enable tap-to-click
-gsettings set org.gnome.settings-daemon.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
