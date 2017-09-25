@@ -74,4 +74,6 @@ sudo dnf install git \
                  ostree-devel \
                  gpgme-devel \
                  libdwarf-devel \
-                 thefuck
+                 thefuck \
+                 flatpak \
+                 flatpak-builder
