@@ -19,7 +19,11 @@ git_dirty_indicator() {
 }
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+parse_git_branch_no_paren() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
 get_ssh_keys() {
@@ -92,12 +96,12 @@ function get-pass() {
     pass -c `pass | grep "$@" | cut -d' ' -f 2`
 }
 
-# The following two functions make it easier to use an unreviewed tag to keep
+# The following three functions make it easier to use an unreviewed tag to keep
 # track of which commits have been reviewed on a branch
 function move-unreviewed() {
     prev_commit=`git rev-list -n1 "unreviewed"`
     git tag -d "unreviewed" >/dev/null
-    next_commit=`git log --format='%H %P' --all | grep -F " $prev_commit" | tail -n1 | cut -f1 -d' '`
+    next_commit=`git log --format='%H %P' --first-parent $(parse_git_branch_no_paren) | grep -F " $prev_commit" | tail -n1 | cut -f1 -d' '`
     git tag "unreviewed" $next_commit
     echo "unreviewed tag moved to commit `git log --oneline -n1 $next_commit`"
 }
