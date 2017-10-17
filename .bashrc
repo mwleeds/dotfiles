@@ -95,7 +95,7 @@ function get-pass() {
     pass -c `pass | grep "$@" | cut -d' ' -f 2`
 }
 
-# The following three functions make it easier to use an unreviewed tag to keep
+# The following two functions make it easier to use an unreviewed tag to keep
 # track of which commits have been reviewed on a branch
 function move-unreviewed() {
     prev_commit=`git rev-list -n1 "unreviewed"`
