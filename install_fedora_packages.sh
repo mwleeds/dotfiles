@@ -6,7 +6,7 @@ sudo dnf install git \
                  python3 \
                  python3-pip \
                  pass \
-                 owncloud-client \
+                 nextcloud-client \
                  chromium \
                  yum-plugin-fastestmirror \
                  irssi \
