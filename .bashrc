@@ -110,5 +110,5 @@ function show-unreviewed() {
     git shw $commit
 }
 
-eval `ssh-agent -s` > /dev/null
+[ x"$SSH_AGENT_PID" == "x" ] && eval `ssh-agent -s` > /dev/null
 eval $(thefuck --alias)
