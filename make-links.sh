@@ -12,9 +12,9 @@ rm -rf ~/.vim && mkdir ~/.vim
 ln -sf ~/Desktop/dotfiles/.vim/plugin ~/.vim
 ln -sf ~/Desktop/dotfiles/.vim/doc ~/.vim
 
-test -e /usr/bin/back.sh || sudo ln -s ~/Desktop/dotfiles/scripts/back.sh /usr/bin/
-test -e /usr/bin/diff-so-fancy || sudo ln -s ~/Desktop/dotfiles/scripts/diff-so-fancy /usr/bin/
-test -e /usr/bin/git-superfixup.pl || sudo ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl /usr/bin/
+test -e ~/.local/bin/back.sh || ln -s ~/Desktop/dotfiles/scripts/back.sh ~/.local/bin/
+test -e ~/.local/bin/diff-so-fancy || ln -s ~/Desktop/dotfiles/scripts/diff-so-fancy ~/.local/bin/
+test -e ~/.local/bin/git-superfixup.pl || ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl ~/.local/bin/
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
