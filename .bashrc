@@ -77,6 +77,7 @@ alias gitkey='ssh-add ~/.ssh/github_id_rsa'
 alias gplom='git pull origin master'
 alias gpsom='git push origin master'
 alias gitst='git status --untracked-files=no'
+alias git='hub'
 
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
