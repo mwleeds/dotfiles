@@ -76,4 +76,5 @@ sudo dnf install git \
                  libdwarf-devel \
                  thefuck \
                  flatpak \
-                 flatpak-builder
+                 flatpak-builder \
+                 hub
