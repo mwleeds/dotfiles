@@ -37,3 +37,8 @@ gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'chromium-brows
 
 # enable tap-to-click
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+
+# enable night light except in the middle of the day
+gsettings set org.gnome.settings-daemon.plugins.color.night-light-enabled true
+gsettings set org.gnome.settings-daemon.plugins.color.night-light-schedule-to 11.0
+gsettings set org.gnome.settings-daemon.plugins.color.night-light-schedule-from 13.0
