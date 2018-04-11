@@ -77,4 +77,6 @@ sudo dnf install git \
                  thefuck \
                  flatpak \
                  flatpak-builder \
-                 hub
+                 hub \
+                 exfat-utils \
+                 fuse-exfat
