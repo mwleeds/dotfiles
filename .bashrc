@@ -81,7 +81,6 @@ alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
 alias gitkey='ssh-add ~/.ssh/github_id_rsa'
 alias gitst='git status --untracked-files=no'
-alias git='hub'
 
 # quilt -> dquilt (https://www.debian.org/doc/manuals/maint-guide/modify.en.html)
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
