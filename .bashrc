@@ -10,6 +10,10 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
 git_dirty_indicator() {
   if [[ -n "$(git status 2> /dev/null | tail -n1)" ]]; then
     if [[ $(git status 2> /dev/null | tail -n1) != *"nothing to commit"* ]]; then
