@@ -87,6 +87,10 @@ alias gpsom='git push origin master'
 alias gitst='git status --untracked-files=no'
 alias git='hub'
 
+# quilt -> dquilt (https://www.debian.org/doc/manuals/maint-guide/modify.en.html)
+alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
+complete -F _quilt_completion -o filenames dquilt
+
 # this command deletes all git branches that have been merged into the current branch, master
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
 
