@@ -10,6 +10,10 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+if [ -f ~/.hub.bash_completion.sh ]; then
+    . ~/.hub.bash_completion.sh
+fi
+
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
 fi
@@ -115,5 +119,6 @@ function show-unreviewed() {
     git shw $commit
 }
 
+which hub >/dev/null && eval "$(hub alias -s)" >/dev/null
 [ x"$SSH_AGENT_PID" == "x" ] && eval `ssh-agent -s` > /dev/null
 eval $(thefuck --alias)
