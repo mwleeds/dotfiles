@@ -42,3 +42,6 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.settings-daemon.plugins.color.night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color.night-light-schedule-to 11.0
 gsettings set org.gnome.settings-daemon.plugins.color.night-light-schedule-from 13.0
+
+# use the dark theme
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark

@@ -18,7 +18,6 @@ test -e ~/.local/bin/diff-so-fancy || ln -s ~/Desktop/dotfiles/scripts/diff-so-f
 test -e ~/.local/bin/git-superfixup.pl || ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl ~/.local/bin/
 
 mkdir -p ~/.config/gtk-3.0
-ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 
 mkdir -p ~/.local/share/gnome-shell
