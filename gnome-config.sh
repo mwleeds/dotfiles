@@ -47,4 +47,6 @@ gsettings set org.gnome.settings-daemon.plugins.color.night-light-schedule-from 
 gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 # wobbly windows!
-gsettings set org.gnome.shell wobbly-effect true
+if gsettings list-keys org.gnome.shell | grep wobbly-effect; then
+    gsettings set org.gnome.shell wobbly-effect true
+fi
