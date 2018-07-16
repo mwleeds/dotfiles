@@ -82,6 +82,11 @@ alias proto='ctags -x --c-kinds=fp'
 alias gitkey='ssh-add ~/.ssh/github_id_rsa'
 alias gitst='git status --untracked-files=no'
 
+# flatpak aliases
+if which org.vim.Vim >/dev/null 2>&1; then
+    alias vim='org.vim.Vim'
+fi
+
 # quilt -> dquilt (https://www.debian.org/doc/manuals/maint-guide/modify.en.html)
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 complete -F _quilt_completion -o filenames dquilt
