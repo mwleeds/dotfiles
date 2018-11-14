@@ -94,7 +94,7 @@ function random-line() {
     sed -n $((n+1))p "$@"
 }
 alias random-word='random-line /usr/share/dict/words | tr -d "\n"'
-alias xkcd936='random-word && random-word && random-word && random-word'
+alias xkcd936='random-word && random-word && random-word && random-word && echo'
 
 # This gets the password for the first matching entry
 function get-pass() {
