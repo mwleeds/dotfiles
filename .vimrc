@@ -3,6 +3,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 colorscheme desert
+hi Comment ctermfg=blue
 set number " line numbers
 set smartcase
 set incsearch " search as characters are typed
