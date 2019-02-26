@@ -29,6 +29,7 @@ filetype plugin indent on
 set title
 set titleold=""
 command Q q
+set number " line numbers
 
 " Automatically detect indentation
 so ~/.vim/plugin/detectindent.vim
