@@ -20,8 +20,6 @@ set visualbell
 set t_vb=
 set mouse=r
 set pastetoggle=<F2>
-"so ~/.vim/plugin/detectindent.vim
-"DetectIndent
 set cursorline " underline current line
 set listchars=eol:•,tab:→\ ,trail:␣,extends:↷,precedes:↶,nbsp:⁔
 set list
@@ -31,6 +29,10 @@ filetype plugin indent on
 set title
 set titleold=""
 command Q q
+
+" Automatically detect indentation
+so ~/.vim/plugin/detectindent.vim
+DetectIndent
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
