@@ -14,10 +14,10 @@
     shw = show --stat -p -U12
 [user]
 	name = Matthew Leeds
-	email = mwleeds@protonmail.com
+	email = matthew.leeds@endlessm.com
 [core]
 	editor = vim
-    pager = "diff-so-fancy | less --tabs=4 -RFX"
+#    pager = "diff-so-fancy | less --tabs=4 -RFX"
 [color]
     ui = true
 [diff]
