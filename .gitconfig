@@ -1,34 +1,34 @@
 [alias]
-	st = status
-	ck = checkout
-	ci = commit
-	ad = add
-	br = branch
-	di = diff
-	pl = pull
-	ps = push
+    st = status
+    ck = checkout
+    ci = commit
+    ad = add
+    br = branch
+    di = diff
+    pl = pull
+    ps = push
     cl = clone
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     grp = grep -p
     shw = show --stat -p -U12
 [user]
-	name = Matthew Leeds
-	email = matthew.leeds@endlessm.com
+    name = Matthew Leeds
+    email = matthew.leeds@endlessm.com
 [core]
-	editor = vim
+    editor = vim
 #    pager = "diff-so-fancy | less --tabs=4 -RFX"
 [color]
     ui = true
 [diff]
     context = 10
 [push]
-	default = simple
+    default = simple
 [branch]
-	autosetuprebase = always
-	autosetupmerge = always
+    autosetuprebase = always
+    autosetupmerge = always
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [format]
     pretty = fuller
 [log]
@@ -36,21 +36,21 @@
 [grep]
     linenumber = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [color "diff"]
-	meta = 227
-	frag = magenta bold
-	commit = 227 bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    meta = 227
+    frag = magenta bold
+    commit = 227 bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [submodule]
-	recurse = true
+    recurse = true
