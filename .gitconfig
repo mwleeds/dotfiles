@@ -17,6 +17,7 @@
     email = matthew.leeds@endlessm.com
 [core]
     editor = vim
+    excludesfile = /home/mwleeds/.gitignore_global
 #    pager = "diff-so-fancy | less --tabs=4 -RFX"
 [color]
     ui = true

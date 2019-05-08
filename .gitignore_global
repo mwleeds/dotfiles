@@ -1,0 +1,4 @@
+tags
+__pycache__
+_build
+*.sw[op]

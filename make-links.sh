@@ -2,6 +2,7 @@
 
 ln -sf ~/Desktop/dotfiles/.gdbinit ~/.gdbinit
 ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/Desktop/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
