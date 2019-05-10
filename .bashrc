@@ -62,7 +62,7 @@ export GOPATH=$HOME/work
 export HISTCONTROL=ignoredups:erasedups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwleeds/jhbuild/install/lib/pkgconfig:/home/mwleeds/jhbuild/install/share/pkgconfig:/usr/share/pkgconfig
-export PATH=~/node_modules/tldr/bin:~/.local/bin:$PATH:.
+export PATH=~/node_modules/tldr/bin:~/.local/bin:~/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:$PATH:.
 export CFLAGS="-g3 -O0 -fno-inline"
 
 mesg n
