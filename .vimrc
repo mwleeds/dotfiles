@@ -30,6 +30,7 @@ set title
 set titleold=""
 command Q q
 set number " line numbers
+set backspace=indent,eol,start " make backspace work under flatpak
 
 " Automatically detect indentation
 so ~/.vim/plugin/detectindent.vim
