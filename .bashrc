@@ -116,5 +116,5 @@ function show-unreviewed() {
     git shw $commit
 }
 
-which hub >/dev/null && eval "$(hub alias -s)" >/dev/null
+which hub &>/dev/null && eval "$(hub alias -s)" >/dev/null
 [ x"$SSH_AGENT_PID" == "x" ] && eval `ssh-agent -s` > /dev/null || true
