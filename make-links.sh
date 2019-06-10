@@ -5,7 +5,6 @@ ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Desktop/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
-ln -sf ~/Desktop/dotfiles/.jhbuildrc ~/.jhbuildrc
 ln -sf ~/Desktop/dotfiles/.git-completion.bash ~/.git-completion.bash
 ln -sf ~/Desktop/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/Desktop/dotfiles/.Xmodmap ~/.Xmodmap
