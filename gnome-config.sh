@@ -48,5 +48,5 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 # wobbly windows!
 if gsettings list-keys org.gnome.shell | grep wobbly-effect; then
-    gsettings set org.gnome.shell wobbly-effect true
+    gsettings set org.gnome.shell wobbly-effect false
 fi
