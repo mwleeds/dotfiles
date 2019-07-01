@@ -1,0 +1,168 @@
+#!/bin/bash
+
+#set -x
+
+XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+FLATBOX_DIR=$XDG_DATA_HOME/flatbox
+USER_DIR=${XDG_DATA_HOME:="$HOME/.local/share"}/flatpak
+ARCH=$(flatpak --default-arch)
+
+get_runtime()
+{
+    FILE=$1
+    grep "^runtime=" $FILE | sed "s/^runtime=//"
+}
+
+usage()
+{
+    echo "usage: flatbox [-h] create|list|enter|delete  .."
+}
+
+list()
+{
+    BOXES=$(ls $FLATBOX_DIR)
+    echo "Current boxes:"
+    for B in $BOXES; do
+        echo "$B - $(get_runtime  ~/.local/share/flatbox/$B/app/metadata)"
+    done
+}
+
+create()
+{
+    if [ "$1" == "" ]; then
+        echo No box name specified
+        exit 1
+    fi
+    NAME=$1
+    shift
+
+    if test -d $FLATBOX_DIR/$NAME; then
+        echo Box named $NAME already exist
+        exit 1
+    fi
+
+    if [ "$1" == "" ]; then
+        echo No runtime specified
+        exit 1
+    fi
+    RUNTIME=$1
+    shift
+
+    if ! flatpak info $RUNTIME &> /dev/null; then
+        echo Required runtime $RUNTIME not installed
+        exit 1
+    fi
+
+    DIR=$FLATBOX_DIR/$NAME
+    mkdir -p $DIR
+    APPDIR=$DIR/app
+
+    flatpak build-init $APPDIR org.flatbox.$NAME $RUNTIME $RUNTIME master > /dev/null
+    mkdir -p $APPDIR/files/bin/
+    cat > $APPDIR/files/bin/startbox <<EOF
+#!/usr/bin/bash
+export PS1="[📦$NAME \W] "
+export PATH=/app/bin:/usr/bin:/usr/lib/sdk/flatbox/bin
+exec /usr/bin/bash
+EOF
+    chmod a+x $APPDIR/files/bin/startbox
+    echo "Created flatbox $NAME"
+}
+
+enter()
+{
+    if [ "$1" == "" ]; then
+        echo No box name specified
+        exit 1
+    fi
+    NAME=$1
+    shift
+    exec flatpak build --filesystem=/tmp --filesystem=/var/tmp  --filesystem=host --share=network --share=ipc --device=all --allow=devel --allow=multiarch \
+         --socket=pulseaudio --socket=session-bus --socket=ssh-auth --socket=system-bus  --socket=wayland --socket=x11 \
+         "--env=FLATBOX=$NAME" \
+         $FLATBOX_DIR/$NAME/app /app/bin/startbox
+}
+
+delete()
+{
+    if [ "$1" == "" ]; then
+        echo No box name specified
+        exit 1
+    fi
+    NAME=$1
+    shift
+    if ! test -d $FLATBOX_DIR/$NAME; then
+        echo No box named $NAME exist
+        exit 1
+    fi
+    rm -rf $FLATBOX_DIR/$NAME
+    echo "Removed flatbox $NAME"
+}
+
+build_tool()
+{
+    if [ "$1" == "" ]; then
+        echo No fd.o branch specified
+        exit 1
+    fi
+    BRANCH=$1
+    shift
+    DIR=`mktemp -d /var/tmp/flatbox-build.XXXXXXXXXX`
+    cd $DIR
+    git clone --recurse-submodules git@github.com:alexlarsson/flatpak-builder.git -b builder-tool
+    cd flatpak-builder
+    flatpak build-init app org.freedesktop.Sdk.Extension.flatbox org.freedesktop.Sdk org.freedesktop.Sdk $BRANCH
+    flatpak build --filesystem=$DIR app ./autogen.sh --prefix=/app --disable-builder
+    flatpak build --filesystem=$DIR app make
+    mkdir -p ~/.local/share/flatpak/extension/org.freedesktop.Sdk.Extension.flatbox/`flatpak --default-arch`/$BRANCH/bin
+    cp flatpak-builder-tool ~/.local/share/flatpak/extension/org.freedesktop.Sdk.Extension.flatbox/`flatpak --default-arch`/$BRANCH/bin/
+    cd
+    rm -rf $DIR
+}
+
+
+while [[ "$1" == -* ]]; do
+    case $1 in
+        -h | --help )
+            usage
+            exit
+            ;;
+        * )
+            echo "Unknown option $1"
+            usage
+            exit 1
+    esac
+    shift
+done
+if [ "$1" == "" ]; then
+    usage
+    exit 1
+fi
+OP=$1
+shift
+case $OP in
+    create)
+        create "$@"
+        exit
+        ;;
+    list)
+        list "$@"
+        exit
+        ;;
+    enter)
+        enter "$@"
+        exit
+        ;;
+    delete)
+        delete "$@"
+        exit
+        ;;
+    build-tool)
+        build_tool "$@"
+        exit
+        ;;
+    * )
+        echo "Unknown command $OP"
+        usage
+        exit 1
+esac
