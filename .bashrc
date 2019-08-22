@@ -77,7 +77,7 @@ alias myip='wget -q -O - checkip.dyndns.org | sed -e "s/.*Current IP Address: //
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias proto='ctags -x --c-kinds=fp'
-alias gitkey='ssh-add ~/.ssh/github_id_rsa'
+alias gitkey='ssh-add ~/.ssh/id_rsa'
 alias gitst='git status --untracked-files=no'
 if which org.vim.Vim &>/dev/null; then
     alias vim='org.vim.Vim'
