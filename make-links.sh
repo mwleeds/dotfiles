@@ -20,8 +20,3 @@ test -e ~/.local/bin/git-superfixup.pl || ln -s ~/Desktop/dotfiles/scripts/git-s
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
-
-mkdir -p ~/.local/share/gnome-shell
-rm -rf ~/.local/share/gnome-shell/extensions
-ln -sf ~/Desktop/dotfiles/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
-
