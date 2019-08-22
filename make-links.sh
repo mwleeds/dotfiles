@@ -4,6 +4,7 @@ ln -sf ~/Desktop/dotfiles/.gdbinit ~/.gdbinit
 ln -sf ~/Desktop/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Desktop/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/Desktop/dotfiles/.vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 ln -sf ~/Desktop/dotfiles/.git-completion.bash ~/.git-completion.bash
 ln -sf ~/Desktop/dotfiles/.bashrc ~/.bashrc
