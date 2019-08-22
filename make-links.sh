@@ -17,7 +17,6 @@ mkdir -p ~/.local/bin/
 test -e ~/.local/bin/back.sh || ln -s ~/Desktop/dotfiles/scripts/back.sh ~/.local/bin/
 test -e ~/.local/bin/diff-so-fancy || ln -s ~/Desktop/dotfiles/scripts/diff-so-fancy ~/.local/bin/
 test -e ~/.local/bin/git-superfixup.pl || ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl ~/.local/bin/
-test -e ~/.local/bin/flatbox || ln -s ~/Desktop/dotfiles/scripts/flatbox ~/.local/bin/
 
 mkdir -p ~/.config/gtk-3.0
 ln -sf ~/Desktop/dotfiles/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
