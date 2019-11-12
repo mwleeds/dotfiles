@@ -91,7 +91,7 @@ complete -F _quilt_completion -o filenames dquilt
 alias delete-merged='git branch --merged | grep -E -v "^\*? master$" | sed "s/ *//" - | xargs git branch -d'
 
 function random-word() {
-    cat /usr/share/dict/words | grep -v "'" | shuf -n 1 | tr -d "\n"
+    cat ~/Desktop/dotfiles/words | grep -v "'" | shuf -n 1 | tr -d "\n"
 }
 alias xkcd936='random-word && random-word && random-word && random-word && random-word && echo'
 
