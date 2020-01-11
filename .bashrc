@@ -19,7 +19,7 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 fi
 
 git_dirty_indicator() {
-  if [[ -n "$(git status --porcelain 2>/dev/null | grep -v "^??")" ]]; then
+  if git status --porcelain 2>/dev/null | grep -v "^??" >/dev/null; then
     echo -n "*"
   fi
 }
