@@ -19,10 +19,8 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 fi
 
 git_dirty_indicator() {
-  if [[ -n "$(git status 2> /dev/null | tail -n1)" ]]; then
-    if [[ $(git status 2> /dev/null | tail -n1) != *"nothing to commit"* ]]; then
-      echo -n "*"
-    fi
+  if [[ -n "$(git status --porcelain 2>/dev/null | grep -v "^??")" ]]; then
+    echo -n "*"
   fi
 }
 
