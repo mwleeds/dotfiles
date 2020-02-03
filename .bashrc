@@ -103,7 +103,7 @@ function get-pass() {
 function move-unreviewed() {
     prev_commit=`git rev-list -n1 "unreviewed"`
     git tag -d "unreviewed" >/dev/null
-    next_commit=`git log --format='%H %P' --first-parent $(parse_git_branch_no_paren) | grep -F " $prev_commit" | tail -n1 | cut -f1 -d' '`
+    next_commit=`git log --format='%H %P' --first-parent $(parse_git_branch_no_paren) -- | grep -F " $prev_commit" | tail -n1 | cut -f1 -d' '`
     git tag "unreviewed" $next_commit
     echo "unreviewed tag moved to commit `git log --oneline -n1 $next_commit`"
 }
