@@ -13,7 +13,7 @@
     grp = grep -p
     shw = show --stat -p -U12
 [user]
-    name = Matthew Leeds
+    name = Phaedrus Leeds
     email = matthew.leeds@endlessm.com
 [core]
     editor = vim
