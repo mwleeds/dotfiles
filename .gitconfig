@@ -8,13 +8,14 @@
     pl = pull
     ps = push
     cl = clone
+    cp = cherry-pick
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     grp = grep -p
     shw = show --stat -p -U12
 [user]
     name = Phaedrus Leeds
-    email = matthew.leeds@endlessm.com
+    email = mwleeds@endlessos.org
 [core]
     editor = vim
     excludesfile = /home/mwleeds/.gitignore_global
@@ -30,6 +31,8 @@
     autosetupmerge = always
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[url "ssh://git@gitlab.gnome.org/"]
+    insteadOf = https://gitlab.gnome.org/
 [format]
     pretty = fuller
 [log]
