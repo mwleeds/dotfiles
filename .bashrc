@@ -80,6 +80,9 @@ alias gitst='git status --untracked-files=no'
 if which org.vim.Vim &>/dev/null; then
     alias vim='org.vim.Vim'
 fi
+if which org.gnome.gedit &>/dev/null; then
+    alias gedit='org.gnome.gedit'
+fi
 
 # quilt -> dquilt (https://www.debian.org/doc/manuals/maint-guide/modify.en.html)
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
