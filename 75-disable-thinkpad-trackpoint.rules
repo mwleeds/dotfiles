@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/75-disable-thinkpad-trackpoint.rules
+# TPSS/2 IBM TrackPoint: Ignore as input device
+ACTION!="add|change", GOTO="input_end"
+ATTRS{name}=="*IBM TrackPoint", ENV{ID_INPUT}="", ENV{ID_INPUT_MOUSE}="", ENV{ID_INPUT_POINTINGSTICK}=""
+LABEL="input_end"
