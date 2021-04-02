@@ -15,7 +15,7 @@
     shw = show --stat -p -U12
 [user]
     name = Phaedrus Leeds
-    email = mwleeds@endlessos.org
+    email = mwleeds@protonmail.com
 [core]
     editor = vim
     excludesfile = /home/mwleeds/.gitignore_global
