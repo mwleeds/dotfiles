@@ -63,8 +63,6 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/local/lib/pkgconfig:/home/mwlee
 export PATH=~/node_modules/tldr/bin:~/.local/bin:~/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:$PATH:.
 export CFLAGS="-g3 -O0 -fno-inline"
 
-mesg n
-
 shopt -s dotglob
 shopt -s checkwinsize
 shopt -s histappend
