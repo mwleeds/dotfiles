@@ -32,9 +32,9 @@
     autosetuprebase = always
     autosetupmerge = always
 [url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+    pushInsteadOf = https://github.com/
 [url "ssh://git@gitlab.gnome.org/"]
-    insteadOf = https://gitlab.gnome.org/
+    pushInsteadOf = https://gitlab.gnome.org/
 [format]
     pretty = fuller
 [log]
