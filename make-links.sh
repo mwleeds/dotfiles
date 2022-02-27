@@ -15,6 +15,8 @@ ln -sf ~/Desktop/dotfiles/.vim/plugin ~/.vim
 ln -sf ~/Desktop/dotfiles/.vim/doc ~/.vim
 
 mkdir -p ~/.local/bin/
+test -e ~/.local/bin/vim || ln -s ~/Desktop/dotfiles/scripts/vim ~/.local/bin/
+test -e ~/.local/bin/gedit || ln -s ~/Desktop/dotfiles/scripts/gedit ~/.local/bin/
 test -e ~/.local/bin/back.sh || ln -s ~/Desktop/dotfiles/scripts/back.sh ~/.local/bin/
 test -e ~/.local/bin/diff-so-fancy || ln -s ~/Desktop/dotfiles/scripts/diff-so-fancy ~/.local/bin/
 test -e ~/.local/bin/git-superfixup.pl || ln -s ~/Desktop/dotfiles/scripts/git-superfixup.pl ~/.local/bin/
