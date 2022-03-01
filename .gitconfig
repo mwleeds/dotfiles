@@ -13,6 +13,9 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     grp = grep -p
     shw = show --stat -p -U12
+    a = assign
+    assign = !bash -c '~/.local/bin/git-assign.sh -M -d "$(git merge-base HEAD master)" "$@"' -
+    assign-all = !bash -c '~/.local/bin/git-assign.sh -M "$@"' -
 [user]
     name = Phaedrus Leeds
     email = mwleeds@protonmail.com
@@ -46,5 +49,5 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
-[submodule]
-    recurse = true
+#[submodule]
+#    recurse = true
