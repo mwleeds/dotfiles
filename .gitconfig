@@ -41,7 +41,7 @@
 [format]
     pretty = fuller
 [log]
-    decorate = auto
+    decorate = short
 [grep]
     linenumber = true
 [filter "lfs"]
