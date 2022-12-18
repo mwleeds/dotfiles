@@ -85,6 +85,7 @@ function random-word() {
     cat ~/Desktop/dotfiles/words | grep -v "'" | shuf -n 1 | tr -d "\n"
 }
 alias xkcd936='random-word && random-word && random-word && random-word && random-word && echo'
+alias urandompass='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;'
 
 # This gets the password for the first matching entry
 function get-pass() {
